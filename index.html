@@ -1,0 +1,1089 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quốc Vinh & Tuyết Như nè💍!</title>
+    <meta name="description" content="7 năm rồi, cưới thôi!">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./favicon/favicon-32x32.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC&display=swap" rel="stylesheet">
+    <meta property="og:title" content="国荣 & 雪茹💍">
+    <meta property="og:description" content=" 点击此处，查看我们的线上婚礼请帖。❤️">
+    <meta property="og:image" content="https://raw.githubusercontent.com/nhuandvinh/ourwedding2505/main/assets/backgroundpc.jpg">
+    <meta property="og:url" content="https://nhuandvinh.github.io/ourwedding2505/" />
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="国荣 & 雪茹💍">
+</head>
+
+<style>
+html, body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    height: auto;
+    min-height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    font-family: 'Noto Sans SC', sans-serif;
+}
+
+.intro-image {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.intro-image img {
+    width: 100%;     
+    height: auto;
+    max-height: 100vh;
+    object-fit: cover; 
+}
+
+.mobile-img {
+    display: none;
+}
+
+.desktop-img {
+    width: 100%; 
+    height: auto;
+    max-height: 100vh;
+    display: block;
+}
+
+@media screen and (max-width: 1023px) {
+    .desktop-img {
+        display: none;
+    }
+    .mobile-img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+}
+
+.button-overlay {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center; /* 💡 Căn giữa ngang */
+  gap: 10px;
+  padding: 0 20px;
+  flex-wrap: wrap;
+}
+
+.button-overlay button {
+  background: #F0E3D6;
+  color: #991C1C;
+  border: none;
+  padding: 10px 18px;
+  margin: 6px;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 22px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(90, 24, 154, 0.15);
+  transition: all 0.3s ease;
+  font-family: 'Noto Sans SC', sans-serif;
+}
+
+.button-overlay button:hover {
+  background: #FA3E3E;
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .button-overlay {
+    bottom: 15px; /* đẩy lên gần ảnh hơn */
+    padding: 0 10px;
+    gap: 6px;
+    justify-content: center; /* 💡 Căn giữa ngang */
+  }
+  .button-overlay button {
+    padding: 8px 14px;      /* nút nhỏ lại */
+    font-size: 15px;        /* chữ nhỏ hơn */
+    border-radius: 20px;    /* bo tròn nhỏ hơn tí */
+  }
+  .button-overlay button:hover {
+    background: #FA3E3E;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes megaphone-shake {
+    0% { transform: scale(1) rotate(0); }
+    10% { transform: scale(1.01) rotate(-1deg); }
+    20% { transform: scale(1.04) rotate(2deg); }
+    30% { transform: scale(1.03) rotate(-1deg); }
+    40% { transform: scale(1.04) rotate(2deg); }
+    50% { transform: scale(1) rotate(0); }
+}
+
+.megaphone-effect {
+    animation: megaphone-shake 1s infinite ease-in-out;
+    margin-top: 10px;   
+}
+
+.open-book {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 15px; /* khoảng cách ở giữa như gáy sách */
+  padding: 20px;
+  flex-wrap: wrap; /* để xuống hàng nếu màn nhỏ */
+  position: relative;
+  margin-top:-10px;
+}
+
+.open-book img {
+  width: 45%;
+  max-width: 100%;
+  height: auto;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* tạo chiều sâu */
+  transition: transform 0.3s ease;
+}
+
+.open-book img:hover {
+  transform: scale(1.02); /* hiệu ứng nổi nhẹ khi hover */
+}
+
+.open-book::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background: #999; /* đường gáy sách */
+  transform: translateX(-1px);
+}
+
+@media (max-width: 768px) {
+  .open-book {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 15px;
+    box-sizing: border-box;
+  }
+
+  .open-book img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+  }
+
+  .open-book::before {
+    content: none; /* dùng cái này thay display: none */
+  }
+}
+
+.music-container {
+    position: absolute;
+    top: 90px;
+    right: -20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Khoảng cách giữa icon và text */
+    opacity: 0.9; /* Độ trong suốt */
+    border-radius: 50px;
+    padding: 15px 25px; /* Điều chỉnh khoảng cách cho đẹp */
+    font-weight: regular;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    z-index: 1000; /* Đảm bảo không bị che */
+    max-width: 200px; /* Giữ kích thước hợp lý trên màn hình nhỏ */
+    will-change: transform;
+}
+
+#vinyl {
+    width: 80px;
+    height: 80px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.spin {
+    animation: rotate 3s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.hint {
+  position: absolute;
+  top: 55px;
+  left: -45px;
+  transform: translate(-50%, -50%);
+  background: rgba(240, 227, 214, 0.9);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  opacity: 1;
+  transition: opacity 0.3s;
+  color: #991C1C;
+  font-family: 'Noto Sans SC', sans-serif;
+}
+
+.music-container.clicked .hint {
+  opacity: 0;
+}
+
+.couple-section {
+  text-align: center;
+  padding: 40px 20px;
+  font-family: 'Georgia', serif;
+  background-color: #fff;
+}
+
+.couple-section h2 {
+  font-size: 20px;
+  margin-bottom: 30px;
+  margin-top: -30px;
+  color: #C1272D;
+  font-family: 'Noto Sans SC', sans-serif;
+}
+
+.couple-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.person {
+  width: 300px;
+  text-align: center;
+}
+
+.person img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 4px solid #cc4b4b;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.person h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-family: 'Noto Sans SC', sans-serif;
+}
+
+.person p {
+  font-size: 14px;
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: -10px;
+  font-family: 'Noto Sans SC', sans-serif;
+}
+
+.heart-center {
+  font-size: 28px;
+  color: #C1272D;
+  align-self: center;
+  animation: pulse 1.2s infinite;
+  font-size: 50px;
+}
+
+/* Nhịp tim */
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.3); }
+}
+
+@media (max-width: 768px) {
+  .couple-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .heart-center {
+    margin-bottom: 20px;
+    margin-top: -10px;
+  }
+}
+
+h6 {
+  font-size: 18px;
+  margin-bottom: -10px;
+  margin-top: 20px;
+  color: #C1272D;
+  font-family: 'Noto Sans SC', sans-serif;
+}
+
+.family-section {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.family-section h3 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: -10px;
+  font-family: 'Noto Sans SC', sans-serif;
+  color: #C1272D;
+}
+
+.family-names {
+  display: flex;
+  justify-content: center;
+  gap: 80px; /* khoảng cách giữa hai bên */
+  flex-wrap: wrap;
+  margin-bottom: -30px;
+  font-family: 'Noto Sans SC', sans-serif;
+}
+
+.family-column {
+  text-align: center;
+}
+
+.family-column h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.family-column p {
+  margin: 4px 0;
+}
+
+.invitation-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.invitation-header h2 {
+  font-size: 50px;
+  color: #b30000;
+  font-family: 'Noto Sans SC', sans-serif;
+  margin-bottom: 10px;
+}
+
+.invitation-header p {
+  font-size: 16px;
+  color: #333;
+  font-family: 'Noto Sans SC', sans-serif;
+}
+
+.wedding-info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      border: 1px solid #eee;
+      margin: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      font-family: 'Noto Sans SC', sans-serif;
+}
+
+    .info-container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 600px;
+    }
+
+    .left, .right {
+      flex: 1;
+      padding: 10px;
+    }
+
+    .left {
+      text-align: left;
+    }
+
+    .left .highlight {
+      color: #c0392b;
+      font-weight: bold;
+      font-size: 30px;
+    }
+
+    .left .time {
+      margin-top: 10px;
+      font-size: 20px;
+      font-weight: bold;
+      color: #c0392b;
+    }
+
+    .center {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 10px;
+    }
+
+    .center .divider {
+      height: 60px;
+      width: 1px;
+      height: 250px;
+      background-color: #000;
+      margin-top: 5px;
+    }
+
+    .right {
+      text-align: center;
+      font-size: 100px;
+      font-weight: bold;
+      color: #c0392b;
+      line-height: 1.2;
+    }
+
+    @media (max-width: 480px) {
+    * {
+      box-sizing: border-box;
+    }
+
+    .wedding-info {
+      max-width: 100%;
+      margin: 20px auto;
+      padding: 16px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      border: 1px solid #f0f0f0;
+    }
+
+    .info-container {
+      display: flex;
+      flex-direction: row; /* luôn giữ ngang */
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .left, .center, .right {
+      padding: 8px;
+    }
+
+    .left {
+      flex: 2;
+      font-size: 15px;
+      text-align: left;
+    }
+
+    .left .highlight {
+      color: #c0392b;
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    .left .time {
+      color: #c0392b;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .center {
+      flex: 0 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .center .divider {
+      width: 1px;
+      height: 200px;
+      background-color: #333;
+    }
+
+    .right {
+      flex: 1;
+      text-align: center;
+      color: #c0392b;
+      font-weight: bold;
+      font-size: 70px;
+      line-height: 1.2;
+    }
+}
+
+  .map-box {
+    display: inline-block;
+    border: 1px dashed #e74c3c;
+    padding: 8px 12px;
+    margin-top: 12px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    background-color: #c0392b;
+    text-align: center;
+    animation: blink 1.5s infinite;
+  }
+
+  .map-box a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+  }
+
+  .map-box a:hover {
+    text-decoration: underline;
+  }
+
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+  }
+    
+.container {
+    margin: auto; /* Căn giữa trang */
+    background: none;
+    border-radius: 10px; /* Bo góc nhẹ */
+    box-shadow: none;
+    border: none;
+    display: flex;
+    flex-direction: column; /* Xếp dọc */
+    align-items: center; /* Căn giữa */
+    max-width: 100%; /* Chiều rộng bằng 100% màn hình */
+    height: auto;
+    padding: 10px; /* Chừa khoảng trống hai bên */
+}
+
+.container img {
+    width: 100%;
+    max-width: 100%; /* Giữ ảnh không quá to */
+    height: auto;
+    object-fit: contain;
+    image-rendering: crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+    padding: 10px;
+}
+
+@media (max-width: 599px) {
+  .section {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1024px) {
+  .section {
+    width: 90%;
+    max-width: 90%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1025px) {
+  .section {
+    width: 90%;
+    max-width: 600px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.falling-heart {
+    position: fixed;
+    top: 0;
+    left: calc(10% + 80% * var(--random-x)); /* Ngẫu nhiên vị trí ngang */
+    font-size: 30px;
+    color: red;
+    animation: fall 5s linear infinite;
+    opacity: 0.8;
+    will-change: transform, opacity;
+}
+
+@keyframes fall {
+    0% { 
+        transform: translateY(-10px) translateX(0) scale(0.8); 
+        opacity: 1; 
+    }
+    50% { 
+        transform: translateY(50vh) translateX(10px) scale(1); 
+    }
+    100% { 
+        transform: translateY(100vh) translateX(-10px) scale(1.2); 
+        opacity: 0; 
+    }
+}
+
+.image-container {
+    position: relative;
+    display: flex;  
+    flex-direction: column; /* Xếp ảnh theo chiều dọc */
+    justify-content: center; /* Căn giữa theo chiều dọc */
+    align-items: center; /* Căn giữa theo chiều ngang */
+    width: 100%;  
+    gap: 10px; /* Điều chỉnh khoảng cách giữa các ảnh */
+    margin-bottom: 10px;
+}
+
+.image-wedding {
+    position: relative;
+    display: flex;  
+    flex-direction: column; /* Xếp ảnh theo chiều dọc */
+    justify-content: center; /* Căn giữa theo chiều dọc */
+    align-items: center; /* Căn giữa theo chiều ngang */
+    width: 100%;  
+    gap: 10px; /* Điều chỉnh khoảng cách giữa các ảnh */
+    margin-bottom: 10px;
+    margin-top: -30px;
+}
+
+#countdown {
+  display: flex;
+  justify-content: center; /* Căn giữa theo chiều dọc */
+  gap: 15px;
+  font-family: 'Noto Sans SC', sans-serif;
+  font-size: 20px;
+  padding: 10px 20px;
+  max-width: 550px; /* Để khung không lớn hơn ảnh */
+  width: 100%; /* Chỉnh theo kích thước ảnh */
+  height: auto; /* Để nội dung không bị cắt */
+  margin: 20px auto;
+  background: #C1272D; /* Giữ nguyên nền */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  color: white; 
+  align-items: center; /* Căn giữa theo chiều ngang */
+}
+
+#countdown div {
+  text-align: center;
+}
+
+#countdown span {
+  font-size: 28px;
+  font-weight: bold;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  #countdown {
+    width: 90%; /* Giúp nó nhỏ hơn một chút để vừa vặn */
+    max-width: 400px; /* Đảm bảo không quá rộng */
+    padding: 10px; /* Giảm khoảng cách bên trong */
+    font-size: 14px; /* Thu nhỏ chữ để phù hợp */
+  }
+}
+
+.announcement1 {
+    color: #B22222;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: 'Noto Sans SC', sans-serif;
+}
+
+#backToTop {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  top: 65%; /* nằm giữa chiều cao */
+  right: 30px; /* nằm sát bên phải */
+  transform: translateY(-50%); /* căn giữa theo chiều dọc */
+  z-index: 100;
+  background-color: #FFFDD0;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.3s ease;
+}
+
+#backToTop:hover {
+  background-color: #faf355;
+}
+
+@media (max-width: 768px) {
+  #backToTop {
+    width: 40px;
+    height: 40px;
+    font-size: 12px;
+    right: 30px;
+    top: 65%;
+  }
+}
+</style>
+</head>
+
+<body>
+<div class="image-container">
+  <img src="2.jpg" class="section namebridegroom" alt="NameBride&Groom">
+</div>
+
+<div class="intro-image">
+    <img src="backgroundpc.jpg" class="desktop-img" alt="Ảnh trên PC">
+    <img src="backgroundph.jpg" class="mobile-img" alt="Ảnh trên Mobile">
+    <div class="button-overlay">
+      <button onclick="scrollToSection('thiep-moi')">💌 请柬</button>
+    </div>
+</div>
+
+<div class="image-container">
+    <img src="mega.jpg" class="section megaphone-effect" alt="WeddingStory">
+</div>
+
+<div class="open-book">
+  <img src="3.png" alt="Trang trái">
+  <img src="3-1.png" alt="Trang phải">
+</div>
+
+<div id="music-container" class="music-container">
+    <img id="vinyl" src="vinyl.png" alt="Vinyl Record" width="50">
+    <audio id="audio" src="co-chut-ngot-ngao.mp3"></audio>
+    <span class="hint">点击我来听音乐🎶</span>
+</div>
+
+<div class="couple-section">
+  <h2>新娘 ♡ 新郎</h2>
+  <div class="couple-container">
+    <div class="person">
+      <img src="1.jpg" alt="Chú rể">
+      <h3>廖国荣</h3>
+      <p>🤵🏻‍♂️：这是新郎。没有什么可八卦的。
+ 他是个内向的人，但他非常非常爱新娘。 
+就这样，没啦～</p>
+    </div>
+
+    <div class="heart-center">♡</div>
+
+    <div class="person">
+      <img src="1-1.jpg" alt="Cô dâu">
+      <h3>黎玉雪茹</h3>
+      <p>👰🏻‍♀️：这是新娘。在社交网络上：<br>打字如风暴般猛烈<br>每条动态她都能热热闹闹地评论一番<br>是当之无愧的“梗图女王” 👑<br>但一见真人，仿佛被“喷了发胶”<br>一样安静……在新郎眼中嘛——她时而“线上风风火火”，时而“线下安静如鸡”。<br>总之，是一个超级可爱的女孩，除了她变身成“狮子”的时候 🦁</p>
+    </div>
+  </div>
+</div>
+
+<h6>两枚戒指，一个承诺｜两只手，一生相伴 ♡</h6>
+
+<div class="family-section">
+  <h3>家族代表</h3>
+  <div class="family-names">
+    <div class="family-column">
+      <h4>男方</h4>
+      <p>陈丽美 女士</p> 
+    </div>
+    <div class="family-column">
+      <h4>女方</h4>
+      <p>陈明战 先生</p> 
+      <p>黎氏坚 女士</p> 
+    </div>
+  </div>
+</div>
+
+<div class="section" alt="Weddinginvitation" id="thiep-moi">
+<div class="invitation-header">
+  <h2>请柬</h2>
+  <p>诚挚邀请您莅临我们的婚宴，与我们家人一同分享这份喜悦</p>
+</div>
+</div>
+
+  <div class="wedding-info">
+    <div class="info-container">
+      <div class="left">
+        <p>婚礼将在<br>
+          <span class="highlight">大喜 PALACE</span><br>
+          第六郡，第十坊<br>
+          胡志明市李昭皇街156号
+        </p>
+        <p class="time">18:00 - 2025年05月25日</p>
+        <p>(农历乙巳年四月廿八日)</p>
+      </div>
+      <div class="center">
+        <div class="divider"></div>
+      </div>
+      <div class="right">
+        <div>25</div>
+        <div>05</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="map-box">
+    📍 地址：<a href="https://www.google.com/maps?q=156+Lý+Chiêu+Hoàng,+Phường+10,+Quận+6,+Hồ+Chí+Minh" target="_blank">
+      点击查看 Google 地图
+    </a>
+  </div>
+
+<div class="invitation-header">
+  <p> 您的到来将是我们的莫大荣幸。</p>
+</div>
+
+<div class="couple-section">
+  <h2>♡ 幸福回忆录 ♡</h2>
+</div>
+
+<div class="image-wedding">
+    <img src="cuonphimpc.png" class="desktop-img" alt="Ảnh trên PC">
+    <img src="cuonphim.jpg" class="mobile-img" alt="Ảnh trên Mobile">
+    <img src="cuonphim1.jpg" class="mobile-img" alt="Ảnh trên Mobile">
+</div>
+
+<div id="countdown">
+  <div><span id="days">00</span>Ngày</div>
+  <div><span id="hours">00</span>Giờ</div>
+  <div><span id="minutes">00</span>Phút</div>
+  <div><span id="seconds">00</span>Giây</div>
+</div>
+
+  <div class="announcement1">
+    <span class="line">七年的爱、欢笑与美好回忆 ♡ <br>这只是永恒的开始</span>
+  </div>
+
+<div class="image-container">
+    <img src="13.jpg" class="section" alt="WHITE">
+    <img src="12.jpg" class="section" alt="WHITE">
+</div>
+
+<script>
+function createHeart() {
+    const heart = document.createElement("div");
+    heart.className = "falling-heart";
+    heart.innerHTML = "❤️";
+
+    let size = Math.random() * 20 + 10;
+    heart.style.fontSize = size + "px";
+    heart.style.left = Math.random() * 100 + "vw";
+
+    const colors = ["#ff4d4d", "#ff66a3", "#ff3385"];
+    heart.style.color = colors[Math.floor(Math.random() * colors.length)];
+    heart.style.animationDuration = Math.random() * 3 + 2 + "s";
+
+    document.body.appendChild(heart);
+    setTimeout(() => heart.remove(), 5000);
+}
+
+// Rơi tim định kỳ
+setInterval(() => {
+    let maxHearts = window.innerWidth < 768 ? 10 : 20;
+    if (document.querySelectorAll(".falling-heart").length < maxHearts) {
+        createHeart();
+    }
+}, 1500);
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    let isPlaying = false;
+    const audio = document.getElementById("audio");
+    const vinyl = document.getElementById("vinyl");
+    const musicContainer = document.getElementById("music-container");
+
+    if (audio && vinyl && musicContainer) {
+        musicContainer.addEventListener("click", () => {
+            if (isPlaying) {
+                audio.pause();
+            } else {
+                audio.play();
+            }
+        });
+
+        audio.addEventListener("play", () => {
+            isPlaying = true;
+            vinyl.classList.add("spin");
+        });
+
+        audio.addEventListener("pause", () => {
+            isPlaying = false;
+            vinyl.classList.remove("spin");
+        });
+    } else {
+        console.warn("❌ Một hoặc nhiều phần tử không tồn tại: audio / vinyl / music-container");
+    }
+});
+</script>
+
+
+    <!-- Thêm Firebase SDK -->
+    <script type="module">
+const isAdmin = true; // 🔥 Đổi thành false nếu không phải admin
+// Import Firebase SDK
+import { initializeApp } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-app.js";
+import { getFirestore, collection, addDoc, onSnapshot, serverTimestamp } from
+"https://www.gstatic.com/firebasejs/11.4.0/firebase-firestore.js";
+
+const firebaseConfig = {
+    apiKey: "AIzaSyDgyb1-VrK7flWVXlha8vEapS0BonKKDOU",
+    authDomain: "wedding-invitation-1b3c8.firebaseapp.com",
+    projectId: "wedding-invitation-1b3c8",
+    storageBucket: "wedding-invitation-1b3c8.appspot.com",
+    messagingSenderId: "440194839662",
+    appId: "1:440194839662:web:bbb00404a14259779ca27f"
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+// Hàm gửi lời chúc vào Firestore
+async function sendMessage() {
+    console.log("🔥 Hàm sendMessage() đã được gọi");
+
+// Lấy dữ liệu từ ô nhập
+    const name = document.getElementById("guestName").value;
+    const message = document.getElementById("guestMessage").value;
+
+// Kiểm tra nếu chưa nhập đủ thì cảnh báo
+    if (!name || !message) {
+        console.warn("⚠️ Vui lòng nhập tên và lời chúc!");
+        return;
+    }
+
+    try {
+        console.log("📤 Đang lưu vào Firestore...");
+        const docRef = await addDoc(collection(db, "guestbook"), {
+            name: name,
+            message: message,
+            timestamp: serverTimestamp(),
+        });
+        console.log("✅ Gửi thành công! ID: ", docRef.id);
+
+// Xóa nội dung nhập sau khi gửi thành công
+        document.getElementById("guestName").value = "";
+        document.getElementById("guestMessage").value = "";
+
+    } catch (error) {
+        console.error("❌ Lỗi khi gửi tin nhắn: ", error);
+    }
+}
+
+import { deleteDoc, doc } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-firestore.js";
+
+async function deleteMessage(messageId) {
+    if (!confirm("Bạn có chắc chắn muốn xóa lời chúc này?")) return; // Xác nhận xóa
+
+    try {
+        await deleteDoc(doc(db, "guestbook", messageId));
+        console.log("✅ Xóa thành công!");
+    } catch (error) {
+        console.error("❌ Lỗi khi xóa: ", error);
+    }
+}
+
+// ✅ Lắng nghe thay đổi trong Firestore để cập nhật lời chúc theo thời gian thực
+// Chỉ giữ một khai báo listenMessages duy nhất!
+function listenMessages() {
+    const messagesRef = collection(db, "guestbook");
+    onSnapshot(messagesRef, (snapshot) => {
+    const messageContainer = document.getElementById("guestbookMessages");
+    messageContainer.innerHTML = ""; // Xóa nội dung cũ trước khi cập nhật
+    snapshot.forEach((doc) => {
+            const msg = doc.data();
+            const messageId = doc.id;
+            const div = document.createElement("div");
+            div.classList.add("message");
+            div.innerHTML = `<strong>${msg.name}:</strong> ${msg.message}`;
+
+// Nếu là admin, thêm nút xóa
+if (isAdmin) {
+   const deleteBtn = document.createElement("button");
+   deleteBtn.textContent = "❌";
+   deleteBtn.style.position = "absolute"; // Đặt vị trí tuyệt đối
+   deleteBtn.style.top = "5px";// Đưa nút lên sát mép trên
+   deleteBtn.style.right = "5px";// Đưa nút sang sát mép phải
+   deleteBtn.style.background = "white";
+   deleteBtn.style.color = "red";
+   deleteBtn.style.border = "none";
+   deleteBtn.style.padding = "5px 10px";
+   deleteBtn.style.borderRadius = "50%";  // Làm tròn nút
+   deleteBtn.style.fontSize = "10px";      // Giảm kích thước chữ
+   deleteBtn.style.width = "16px";        // Kích thước nút nhỏ gọn
+   deleteBtn.style.height = "16px";       
+   deleteBtn.style.display = "flex";
+   deleteBtn.style.alignItems = "center";
+   deleteBtn.style.justifyContent = "center";
+   deleteBtn.style.cursor = "pointer";
+   deleteBtn.onclick = () => deleteMessage(messageId);
+   div.style.position = "relative";
+   div.appendChild(deleteBtn);
+}
+   messageContainer.appendChild(div);
+});
+});
+}
+
+// Đảm bảo các hàm có thể gọi từ HTML
+document.addEventListener("DOMContentLoaded", () => {
+    window.sendMessage = sendMessage;
+    listenMessages(); // Lắng nghe tin nhắn khi trang tải
+});
+    </script>
+
+<script>
+  function scrollToSection(id) {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+</script>
+</script>
+<script>
+  // Đặt ngày giờ cưới: 25/05/2025 lúc 08:00 sáng
+  const weddingDate = new Date("2025-05-25T08:00:00").getTime();
+
+  // Cập nhật mỗi giây
+  const countdown = setInterval(() => {
+    const now = new Date().getTime(); // Thời gian hiện tại
+    const distance = weddingDate - now; // Thời gian còn lại
+
+    // Nếu đã qua ngày cưới
+    if (distance < 0) {
+      clearInterval(countdown);
+      document.getElementById("countdown").innerHTML = "💍 Đã đến ngày hạnh phúc!";
+      return;
+    }
+
+    // Tính số ngày, giờ, phút, giây còn lại
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    // Hiển thị kết quả
+    document.getElementById("days").innerText = String(days).padStart(2, '0');
+    document.getElementById("hours").innerText = String(hours).padStart(2, '0');
+    document.getElementById("minutes").innerText = String(minutes).padStart(2, '0');
+    document.getElementById("seconds").innerText = String(seconds).padStart(2, '0');
+  }, 1000);
+</script>
+
+<!-- 🔝 Nút quay về đầu trang -->
+<button id="backToTop" title="Lên đầu trang">🔝</button>
+<script>
+  const backToTopButton = document.getElementById("backToTop");
+
+  window.addEventListener("scroll", () => {
+    // Hiện nút khi cuộn xuống 200px
+    if (window.scrollY > 200) {
+      backToTopButton.style.display = "block";
+    } else {
+      backToTopButton.style.display = "none";
+    }
+  });
+
+  // Cuộn mượt về đầu trang
+  backToTopButton.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+</script>
+</body>
+</html>
